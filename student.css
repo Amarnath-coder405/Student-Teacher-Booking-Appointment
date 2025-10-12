@@ -1,0 +1,248 @@
+/* ================================
+   student.css
+   Styles for Student Dashboard
+   ================================ */
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Header */
+.site-header {
+  background-color: #00a86b;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: slideInTop 0.4s ease;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00a86b;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #008f5c;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #555;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #333;
+}
+
+/* Navigation Tabs */
+.student-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #00a86b;
+}
+
+.nav-btn.active {
+  color: #00a86b;
+  border-bottom: 3px solid #00a86b;
+}
+
+/* Sections */
+.section-content {
+  animation: fadeIn 0.5s ease;
+  margin-top: 1rem;
+}
+
+.section-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+/* Forms */
+.form-inline,
+.form-vertical {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-inline select,
+.form-inline input,
+.form-inline button,
+.form-vertical textarea,
+.form-vertical select {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-inline input:focus,
+.form-vertical textarea:focus {
+  border-color: #00a86b;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+.confirmation-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #e6ffed;
+  color: #007c47;
+  border: 1px solid #00a86b;
+  border-radius: 4px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Teacher List Cards */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.teacher-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.teacher-card:hover {
+  transform: translateY(-4px);
+}
+
+.teacher-card h3 {
+  margin-bottom: 0.3rem;
+  color: #00a86b;
+}
+
+.teacher-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Search Input */
+#search-input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#search-input:focus {
+  border-color: #00a86b;
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-inline,
+  .form-vertical {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

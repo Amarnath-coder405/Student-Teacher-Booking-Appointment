@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Booking System</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="signup-container">
+    <form id="signup-form" class="signup-form">
+      <h2>Create Account</h2>
+
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="John Doe" />
+      </div>
+
+      <!-- Email Address -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required placeholder="john@example.com" />
+      </div>
+
+      <!-- Role Selection -->
+      <div class="form-group">
+        <label for="role">Registering as:</label>
+        <select id="role" required>
+          <option value="">Select Role</option>
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Create Password</label>
+        <input type="password" id="password" required placeholder="••••••••" />
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" required placeholder="••••••••" />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-primary">Sign Up</button>
+
+      <!-- Success Message -->
+      <p id="signup-success" class="success-msg hidden">Account created successfully! ✅</p>
+
+      <!-- Redirect -->
+      <p class="redirect-link">Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

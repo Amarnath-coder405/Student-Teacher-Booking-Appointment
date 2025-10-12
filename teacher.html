@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="teacher.css" />
+</head>
+<body>
+
+  <!-- Teacher Dashboard -->
+  <div id="dashboard-screen" class="screen">
+    <header class="teacher-header">
+      <div class="container header-inner">
+        <h1>👩‍🏫 Teacher Dashboard</h1>
+        <button id="btn-logout" class="btn-secondary">Logout</button>
+      </div>
+    </header>
+
+    <main class="container main-content">
+      <!-- Navigation Tabs -->
+      <nav class="teacher-nav">
+        <button data-section="schedule-section" class="nav-btn active">Schedule</button>
+        <button data-section="appointments-section" class="nav-btn">Appointments</button>
+        <button data-section="messages-section" class="nav-btn">Messages</button>
+      </nav>
+
+      <!-- Schedule Section -->
+      <section id="schedule-section" class="section-content">
+        <h2>Set Your Availability</h2>
+        <form id="schedule-form" class="form-inline">
+          <input type="date" id="slot-date" required />
+          <input type="time" id="slot-time" required />
+          <button type="submit" class="btn-primary">Add Slot</button>
+        </form>
+
+        <div class="table-responsive">
+          <table class="slots-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="slots-table-body">
+              <!-- Dynamic rows go here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Appointments Section -->
+      <section id="appointments-section" class="section-content hidden">
+        <h2>Appointment Requests</h2>
+        <div class="table-responsive">
+          <table class="appt-table">
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="appt-table-body">
+              <!-- Appointment data goes here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Messages Section -->
+      <section id="messages-section" class="section-content hidden">
+        <h2>Messages</h2>
+        <div class="messages-list" id="messages-list">
+          <!-- Messages will load here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="teacher.js"></script>
+</body>
+</html>

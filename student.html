@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="student.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>🎓 Student Dashboard</h1>
+      <button id="logout-btn" class="btn-secondary">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Navigation Tabs -->
+    <nav class="student-nav">
+      <button class="nav-btn active" data-section="search-section">Search Teachers</button>
+      <button class="nav-btn" data-section="appointments-section">Book Appointment</button>
+      <button class="nav-btn" data-section="messages-section">Send Message</button>
+    </nav>
+
+    <!-- Section: Search Teachers -->
+    <section id="search-section" class="section-content">
+      <h2>🔍 Search Teachers</h2>
+      <input type="text" id="search-input" placeholder="Search by name, department, or subject..." />
+      <div id="teacher-list" class="card-list">
+        <!-- Teachers will be loaded here dynamically -->
+      </div>
+    </section>
+
+    <!-- Section: Book Appointment -->
+    <section id="appointments-section" class="section-content hidden">
+      <h2>📅 Book Appointment</h2>
+      <form id="appointment-form" class="form-inline">
+        <select id="teacher-select" required>
+          <option value="">Select Teacher</option>
+        </select>
+        <input type="date" id="appointment-date" required />
+        <input type="time" id="appointment-time" required />
+        <button type="submit" class="btn-primary">Book</button>
+      </form>
+      <div id="appointment-confirmation" class="confirmation-message hidden">
+        Appointment booked successfully! ✅
+      </div>
+    </section>
+
+    <!-- Section: Send Message -->
+    <section id="messages-section" class="section-content hidden">
+      <h2>✉️ Send Message</h2>
+      <form id="message-form" class="form-vertical">
+        <select id="message-teacher-select" required>
+          <option value="">Select Teacher</option>
+        </select>
+        <textarea id="message-text" rows="4" placeholder="Type your message..." required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+      <div id="message-confirmation" class="confirmation-message hidden">
+        Message sent successfully! 📬
+      </div>
+    </section>
+
+  </main>
+
+  <script src="student.js"></script>
+</body>
+</html>

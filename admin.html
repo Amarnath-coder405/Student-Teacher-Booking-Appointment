@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Teacher & Student Management</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="admin-header">
+    <div class="container header-inner">
+      <h1>Admin Dashboard</h1>
+      <button class="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- Teacher Management Section -->
+    <section class="teacher-section">
+      <h2>Manage Teachers</h2>
+      <form id="teacher-form" class="form-inline">
+        <input type="text" id="teacher-name" placeholder="Name" required />
+        <input type="text" id="teacher-dept" placeholder="Department" required />
+        <input type="text" id="teacher-subject" placeholder="Subject" required />
+        <button type="submit" class="btn-primary">Add / Update</button>
+        <button type="button" id="teacher-cancel-btn" class="btn-secondary hidden">Cancel</button>
+      </form>
+
+      <div class="table-responsive">
+        <table class="teacher-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Subject</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="teacher-table-body">
+            <!-- Rows inserted by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Student Registrations Section -->
+    <section class="student-section">
+      <h2>Student Registrations</h2>
+      <div class="table-responsive">
+        <table class="student-table">
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Requested Teacher</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="student-table-body">
+            <!-- Rows inserted by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
