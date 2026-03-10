@@ -1,6 +1,6 @@
-# Student-Teacher Appointment Booking System
+# Student-Teacher Appointment Booking System:
 
-## Introduction
+# Introduction:
 
 Appointment booking systems have become essential in streamlining interactions between service providers and users. Traditionally used in sectors like healthcare and administration, these systems have evolved into web-based platforms that improve efficiency, reduce wait times, and enhance communication.
 
