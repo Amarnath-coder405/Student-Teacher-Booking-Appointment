@@ -1,12 +1,12 @@
 # Student-Teacher Appointment Booking System:
 
-# Introduction:
+# Introduction
 
 Appointment booking systems have become essential in streamlining interactions between service providers and users. Traditionally used in sectors like healthcare and administration, these systems have evolved into web-based platforms that improve efficiency, reduce wait times, and enhance communication.
 
 This project introduces a web-based appointment booking system tailored specifically for academic environments. The system allows students to schedule appointments with Teachers online, ensuring clear communication and efficient time management. Both students and Teachers can access the system from any location using internet-enabled devices such as laptops or mobile phones.
 
-## Objective
+## Objective:
 
 The primary objective of this system is to simplify and modernize the process of scheduling academic consultations. It aims to:
 
